@@ -54,7 +54,31 @@ beep.kaamelott <- function(sound=1, expr=NULL) {
               ellereste = "ellereste.wav",
               capique = "capique.wav",
               catapulteendives = "catapulteendives.wav",
-              lecode = "lecode.wav")
+              lecode = "lecode.wav",
+              alavolette = "a_la_volette.wav",
+              animauxdelaforet = "animaux_de_la_foret.wav",
+              ave_cesar = "ave_cesar.wav",
+              interprete = "interprete.wav",
+              legraal = "le_graal_par_ci_le_graal_par_la.wav",
+              lespattes = "les_pattes_de_canard.wav",
+              mecreant = "mecreant_2.wav",
+              gros = "on_en_a_gros.wav",
+              meule = "regardez_moi_cette_meule.wav",
+              colere = "tres_en_colere.wav",
+              woouhou = "wooouuuhouhouhou_c_est_mortel.wav",
+              faux = "cest_pas_faux2.wav",
+              doigts = "sortez-vous_les_doigts_du_cul.wav",
+              mordu = "mordu.wav",
+              forts = "on_est_forts.wav",
+              revolte = "bon_ben_revolte.wav",
+              ecole = "mon_frere_y_peut_pas_aller_a_l_ecole.wav",
+              foutremerde = "venir_foutre_votre_merde.wav",
+              graines = "je_ne_mange_pas_de_graines.wav",
+              casuffit = "casuffit.wav",
+              fulgurant = "fulgurant.wav",
+              impressionnant = "vraiment_impressionnant.wav",
+              pdg = "paysdegalles.wav")
+  
   sound_path <- NULL
   if(is.na(sounds[sound]) || length(sounds[sound]) != 1) {
     if(is.character(sound)) {
@@ -75,11 +99,11 @@ beep.kaamelott <- function(sound=1, expr=NULL) {
       }
     }
   } else {
-    sound_path <- system.file(paste("sounds/", sounds[sound], sep=""), package="beepr")
+    sound_path <- system.file(paste("sounds/", sounds[sound], sep=""), package="beepr.kaamelott")
   }
   
   if(is.null(sound_path)) { # play a random sound
-    sound_path <- system.file(paste("sounds/", sample(sounds, size=1), sep=""), package="beepr")
+    sound_path <- system.file(paste("sounds/", sample(sounds, size=1), sep=""), package="beepr.kaamelott")
   }
   
   tryCatch(play_file(sound_path), error = function(ex) {
