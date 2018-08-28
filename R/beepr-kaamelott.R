@@ -59,7 +59,7 @@ beep.kaamelott <- function(sound=1, expr=NULL) {
               animauxdelaforet = "animaux_de_la_foret.wav",
               ave_cesar = "ave_cesar.wav",
               interprete = "interprete.wav",
-              legraal = "le_graal_par_ci_le_graal_par_la.wav",2
+              legraal = "le_graal_par_ci_le_graal_par_la.wav",
               lespattes = "les_pattes_de_canard.wav",
               mecreant = "mecreant_2.wav",
               gros = "on_en_a_gros.wav",
