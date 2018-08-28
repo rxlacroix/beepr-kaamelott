@@ -16,7 +16,7 @@
 #' # Play a "ping" sound
 #' beep()
 #' 
-#' @name beepr
+#' @name beepr.kaamelott
 #' @encoding UTF-8
 #' @docType package
 #' @author Rasmus Bååth < rasmus.baath@@gmail.com >

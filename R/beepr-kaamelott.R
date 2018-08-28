@@ -40,7 +40,7 @@
 #' update.packages(ask=FALSE); beep()
 #' }
 #'@export
-beep <- function(sound=1, expr=NULL) {
+beep.kaamelott <- function(sound=1, expr=NULL) {
   expr
   sounds <- c(pereunijambiste = "pereunijambiste.wav",
               corbeaudecede = "corbeaudecede.wav",
@@ -53,7 +53,8 @@ beep <- function(sound=1, expr=NULL) {
               jetecrametafamille = "jetecrametafamille.wav",
               ellereste = "ellereste.wav",
               capique = "capique.wav",
-              catapulteendives = "catapulteendives.wav")
+              catapulteendives = "catapulteendives.wav",
+              lecode = "lecode.wav")
   sound_path <- NULL
   if(is.na(sounds[sound]) || length(sounds[sound]) != 1) {
     if(is.character(sound)) {
@@ -125,7 +126,7 @@ beep <- function(sound=1, expr=NULL) {
 #' 
 #'@export
 
-beep_on_error <- function(expr, sound = 1) {
+beepk_on_error <- function(expr, sound = 1) {
   q_expr <- substitute(expr)
   
   msg <- paste0("An error occurred in ", deparse(q_expr))
@@ -133,7 +134,7 @@ beep_on_error <- function(expr, sound = 1) {
   
   tryCatch(expr, error = function(e) {
     message(paste0(msg, ": ", e$message))
-    beep(sound)
+    beep.kaamelott(sound)
   })
 }
 
