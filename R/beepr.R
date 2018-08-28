@@ -42,17 +42,18 @@
 #'@export
 beep <- function(sound=1, expr=NULL) {
   expr
-  sounds <- c(ping = "microwave_ping_mono.wav",
-              coin = "smb_coin.wav",
-              fanfare = "victory_fanfare_mono.wav",
-              complete = "work_complete.wav",
-              treasure = "new_item.wav",
-              ready = "ready_master.wav",
-              shotgun = "shotgun.wav",
-              mario = "smb_stage_clear.wav",
-              wilhelm = "wilhelm.wav",
-              facebook = "facebook.wav",
-              sword = "sword.wav")
+  sounds <- c(pereunijambiste = "pereunijambiste.wav",
+              corbeaudecede = "corbeaudecede.wav",
+              cavaprendreuneplombe = "cavaprendreuneplombe.wav",
+              commelaneige = "commelaneige.wav",
+              jesurveillelestockdepain = "jesurveillelestockdepain.wav",
+              chouette = "chouette.wav",
+              miours = "mioursmiscorpion.wav",
+              savoureusescotelettes = "savoureusescotelettes.wav",
+              jetecrametafamille = "jetecrametafamille.wav",
+              ellereste = "ellereste.wav",
+              capique = "capique.wav",
+              catapulteendives = "catapulteendives.wav")
   sound_path <- NULL
   if(is.na(sounds[sound]) || length(sounds[sound]) != 1) {
     if(is.character(sound)) {
