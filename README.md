@@ -1,56 +1,63 @@
 `beepr.kaamelott`: beepr avec du Kaamelott dedans
 ========================================================
 
+L'entièreté de l'intelligence derrière ce package revient à https://github.com/rasmusab/beepr.
+
+
 
 Installation
 ----------------
 
 
-
 ```
-library(devtools)
-install_github("rxlacroix/beepr.kaamelott")
+devtools::install_github("rxlacroix/beepr.kaamelott")
 ```
 
-Requirements
+Exigences
 ---------------
 
-If you are using Windows or OS X `beepr.kaamelott` relies on the `audio` package for sound playback and no external program is needed.
+Si vous utilisez Windows ou OS X `beepr.kaamelott` fait appelle au package `audio` pour jouer des sons et aucun programme externe n'est nécessaire.
 
-If you're on Linux `beepr` relies on you having either the `paplay` utility from the Pulse Audio system, the `aplay` utility from the ALSA system or [VLC media player](http://www.videolan.org/vlc/index.html) installed and on the PATH. Chances are that you alread have one of these. If you are on Debian/Ubuntu you can otherwise get VLC by running the following in a terminal:
+Si vous êtes un utilisateur de Linux `beepr.kaamelott` a besoin que vous ayez soit l'utilitaire `paplay` du système Pulse Audio, soit l'utilitaire `aplay` du système ALSA ou[VLC media player](http://www.videolan.org/vlc/index.html) installé et dans le PATH. Il y a de fortes chances que vous en ayez déjà une des solutions. Si vous êtes sous Debian/Ubuntu, vous pouvez obtenir VLC en exécutant ce qui suit dans un terminal :
 
 ```
 sudo apt-get install vlc
 ```
 
-Details
+Détails
 ------------
 
-`beep.kaamelott()` plays a short sound which is useful if you want to get notified, for example, when a script has finished. As an added bonus there are a number of different sounds to choose from.
+`beep.kaamelott()` joue une réplique de Kaamelott ce qui est parfaitement adapté si vous voulez être informé de la plus belle des façons, par exemple quand un script se termine, ou tourne mal.  
 
-### Usage
+### Utilisation
 
-`beep(sound = 1, expr = NULL)`
+`beep.kaamelott(sound = 1, expr = NULL)`
 
 ### Arguments
 
-`sound`  character string or number specifying what sound to be played by either specifying one of the built in sounds or specifying the path to a wav file. The default is 1. Possible sounds are:
+`sound`  est un nombre spécifiant quel son doit être joué en référence à un fichier son .wav précis. Comme il y a 36 sons, l'argument peut aller de 1 à 36.
 
-1 => 36
 
-If `sound` does not match any of the sounds above, or is a valid path, a random sound will be played.
+Si `sound` ne correspond pas à un bon argument, une réplique est tirée au sort.
 
-`expr`	An optional expression to be executed before the sound.
 
 ### Examples
 
 ```
-# Play a specific sound
-beep.kaamelott(1)
+# Jouer une réplique spécifique
+beep.kaamelott(22)
 
-# Play a random sound
+# Avoir une réplique au hasard
 beep.kaamelott(0)
 
-# Play a sound if an error occurs
-beepk_on_error(1 + "a", sound = "wilhelm")
+# Quand un script se termine
+.
+.
+.
+plot(x,y)
+beep.kaamelott(33) # ou beep.kaamelott(31) ou beep.kaamelott(24) 
+
+# Quand une erreur survient
+
+beepk_on_error(fonction(poulette), sound = 27)
 ```
